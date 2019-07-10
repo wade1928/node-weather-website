@@ -15,7 +15,11 @@ const forecast = (latitude, longitude, callback) => {
                     body.currently.temperature
                 } degrees out.  There is a ${
                     body.currently.precipProbability
-                }% chance of rain.`
+                }% chance of rain. The expected high temperature is ${
+                    body.daily.data[0].temperatureHigh
+                } degrees. The expected overnight low is ${
+                    body.daily.data[0].temperatureLow
+                } degrees.`
             );
         }
     });
